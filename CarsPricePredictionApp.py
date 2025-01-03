@@ -11,7 +11,7 @@ st.set_page_config(page_title="Cars Price Prediction App", layout="wide", page_i
 #loading the encoding files
 typeColumn_encoding=joblib.load('type_mapping.pkl')
 modelColumn_encoding=joblib.load('model_mapping.pkl')
-data=pd.read_csv(r'C:\Users\amazon\Desktop\Kayfa End Projects\Cars Price Prediction\car_prices-cleaned.csv')
+data=pd.read_csv("car_prices-cleaned.csv")
 df=data.copy()
 
 
