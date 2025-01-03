@@ -25,7 +25,6 @@ with st.sidebar:
        selected_transmission = st.sidebar.selectbox("Select transmission Type:", options=["All"] + list(df['transmission'].unique()), index=0, key='sidebar_transmission')
        selected_owner = st.sidebar.selectbox("Select owner Type:", options=["All"] + list(df['owner'].unique()), index=0, key='sidebar_owner')
        st.write("")
-       st.write("")
        st.sidebar.markdown("Made by [Mohamed Elhamshary 🐱‍👤](https://github.com/Hamshary1000)")
 
 
