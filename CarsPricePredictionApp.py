@@ -5,7 +5,7 @@ import plotly.express as px
 import joblib
 from sklearn.preprocessing import StandardScaler
 
-st.set_page_config(page_title="Cars Prices Prediction App", layout="wide", page_icon="🚗")
+st.set_page_config(page_title="Car Price Prediction App", layout="wide", page_icon="🚗")
 
 
 #loading the encoding files
@@ -18,7 +18,7 @@ df=data.copy()
 with st.sidebar:
 
        st.sidebar.image('car logo.png')
-       st.sidebar.subheader("Cars Prices Analysis and prediction app ")
+       st.sidebar.subheader("Car Price Analysis and prediction app ")
        st.sidebar.write("")
        selected_fuel = st.sidebar.selectbox("Select Fuel Type:", options=["All"] + list(df['fuel'].unique()), index=0, key='sidebar_fuel_select')
        selected_seller_type = st.sidebar.selectbox("Select Seller Type:", options=["All"] + list(df['seller_type'].unique()), index=0, key='sidebar_seller_type')
