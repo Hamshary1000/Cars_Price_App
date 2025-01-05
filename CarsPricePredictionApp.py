@@ -229,7 +229,7 @@ with tab3:
               input_data_scaled = scaler.transform(input_data)
               prediction_scaled = ml_model.predict(input_data_scaled)
               #pred_org=target_scaler.inverse_transform(prediction_scaled.reshape(-1,1))
-              st.success(f'Your Predicted Price is: ${prediction_scaled:,.2f}')
+              st.success(f'Your Predicted Price is: ${prediction_scaled}')
 
  
 
