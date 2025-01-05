@@ -5,7 +5,7 @@ import plotly.express as px
 import joblib
 from sklearn.preprocessing import StandardScaler
 
-st.set_page_config(page_title="Cars Price Prediction App", layout="wide", page_icon="🚗")
+st.set_page_config(page_title="Cars Prices Prediction App", layout="wide", page_icon="🚗")
 
 
 #loading the encoding files
@@ -18,7 +18,7 @@ df=data.copy()
 with st.sidebar:
 
        st.sidebar.image('car logo.png')
-       st.sidebar.subheader("Cars Price Analysis and prediction app ")
+       st.sidebar.subheader("Cars Prices Analysis and prediction app ")
        st.sidebar.write("")
        selected_fuel = st.sidebar.selectbox("Select Fuel Type:", options=["All"] + list(df['fuel'].unique()), index=0, key='sidebar_fuel_select')
        selected_seller_type = st.sidebar.selectbox("Select Seller Type:", options=["All"] + list(df['seller_type'].unique()), index=0, key='sidebar_seller_type')
@@ -47,7 +47,7 @@ tab1, tab2, tab3 = st.tabs(["🏠 Home", "📈 Analysis", "🤖 Prediction"])
 with tab1:
 
        #setting up the context 
-       st.title("Cars Price Analysis & Prediction App")
+       st.title("Cars Prices Analysis & Prediction App")
        st.write('Are you curious about the potential market price of a car? This app allows you to predict the resale price of vehicles using machine learning!Simply input the cars details like its model, year, engine size, and more.  Our algorihm will provide an accurate price estimate based on historical data Whether you are buying or selling, this tool can help you make informed decisions')
        st.image('car logo.png')
 
