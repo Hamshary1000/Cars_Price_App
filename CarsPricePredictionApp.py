@@ -47,7 +47,7 @@ tab1, tab2, tab3 = st.tabs(["🏠 Home", "📈 Analysis", "🤖 Prediction"])
 with tab1:
 
        #setting up the context 
-       st.title("Cars Prices Analysis & Prediction App")
+       st.title("Car Price Analysis & Prediction App")
        st.write('Are you curious about the potential market price of a car? This app allows you to predict the resale price of vehicles using machine learning!Simply input the cars details like its model, year, engine size, and more.  Our algorihm will provide an accurate price estimate based on historical data Whether you are buying or selling, this tool can help you make informed decisions')
        st.image('car logo.png')
 
