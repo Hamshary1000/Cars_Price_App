@@ -95,13 +95,13 @@ with tab2:
        with visual1:
               # Visual 1: Average Selling Price by Fuel
               df_fuel = df_filtered.groupby('fuel')['selling_price'].mean()
-              fig1 = px.bar(df_fuel, x=df_fuel.index, y=df_fuel.values, title="Average Selling Price by Fuel")
+              fig1 = px.bar(x=df_fuel.index, y=df_fuel.values, title="Average Selling Price by Fuel",labels={'x': 'Fuel Type', 'y': 'Average Selling Price'})
               fig1.update_layout(xaxis_showgrid=False, yaxis_showgrid=False)
               st.plotly_chart(fig1)
 
               # Visual 2: Average Selling Price by Owner
               df_owner = df_filtered.groupby('owner')['selling_price'].mean()
-              fig2 = px.bar(df_owner, x=df_owner.values, y=df_owner.index, title="Average Selling Price by Owner",orientation='h')
+              fig2 = px.bar(x=df_owner.values, y=df_owner.index, title="Average Selling Price by Owner",orientation='h',labels={'x': 'Average Selling Price', 'y': 'Owner Type'})
               fig2.update_layout(xaxis_showgrid=False, yaxis_showgrid=False, xaxis=dict(tickformat=""))
               st.plotly_chart(fig2)
        
