@@ -123,7 +123,7 @@ with tab2:
 
               # Visual 4: Average Selling Price by Transmission
               df_transmission = df_filtered.groupby('transmission')['selling_price'].mean()
-              fig4 = px.bar(df_transmission, x=df_transmission.index, y=df_transmission.values, title="Average Selling Price by Transmission")
+              fig4 = px.bar(df_transmission, x=df_transmission.index, y=df_transmission.values, title="Average Selling Price by Transmission",labels={'y': 'Average Selling Price', 'x': 'transmission'})
               fig4.update_layout(xaxis_showgrid=False, yaxis_showgrid=False)
               st.plotly_chart(fig4)  
 
